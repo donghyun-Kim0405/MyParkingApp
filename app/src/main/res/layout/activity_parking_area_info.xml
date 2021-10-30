@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".parkingarea.ParkingAreaInfoActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/map_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_bookmark"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icon_bookmark_unselected"
+                    android:layout_gravity="right"
+                    />
+
+            </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <Button
+                        android:text="주차장정보"
+                        android:id="@+id/btn_parkingAreaInfo"
+                        android:background="#ffffff"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        />
+                    <Button
+                        android:id="@+id/btn_operation"
+                        android:text="운영"
+                        android:background="#ffffff"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        />
+                    <Button
+                        android:id="@+id/btn_fee"
+                        android:text="요금"
+                        android:background="#ffffff"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_review"
+                        android:text="이용후기"
+                        android:background="#ffffff"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        />
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:id="@+id/layout_parkingAreaInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    >
+                    <TextView
+                        android:id="@+id/parkingAreaName"
+                        android:text="주차장명 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+
+                        />
+                    <TextView
+                        android:id="@+id/parkingLotClassification"
+                        android:text="주차장 구분 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+
+                        />
+                    <TextView
+                        android:id="@+id/parkingType"
+                        android:text="주차장 유형 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+
+                        />
+                    <TextView
+                        android:id="@+id/locationSupportNumber"
+                        android:text="소재지지번주소 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+
+                        />
+                    <TextView
+                        android:id="@+id/numberOfParkingLots"
+                        android:text="주차구획수 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+
+                        />
+                    <TextView
+                        android:id="@+id/phoneNumber"
+                        android:text="전화번호 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+
+                        />
+                    <TextView
+                        android:id="@+id/specialNote"
+                        android:text="특기사항 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_operation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+
+                    >
+                    <TextView
+                        android:id="@+id/operatingDays"
+                        android:text="운영요일 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/weekdayOperationStartTime"
+                        android:text="평일운영시작시각 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/weekdayOperationEndTime"
+                        android:text="평일운영종료시각 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/saturdayOperationStartTime"
+                        android:text="토요일운영시작시각 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/saturdayOperationEndTime"
+                        android:text="토요일운영종료시각 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/holidayOperationStartTime"
+                        android:text="공휴일운영시작시각 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/holidayOperationEndTime"
+                        android:text="공휴일운영종료시각 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/layout_fee"
+                    android:visibility="invisible"
+
+                    >
+                    <TextView
+                        android:id="@+id/rateInformation"
+                        android:text="요금정보 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/basicParkingTime"
+                        android:text="주차기본시간 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/basicParkingFee"
+                        android:text="주차기본요금 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/additionalUnitTime"
+                        android:text="추가단위시간 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/additionalCharge"
+                        android:text="추가단위요금 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/applicationTimeForParkingTicketPerDay"
+                        android:text="1일주차권요금적용시간 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/oneDayParkingTicketFee"
+                        android:text="1일주차권요금 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/monthlyTicketFee"
+                        android:text="월정기권요금 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/paymentMethod"
+                        android:text="결제방법 : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textSize="20sp"
+                        />
+
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>
